@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "elytrafix",
+	"version": "${version}",
+	"name": "ElytraFix",
+	"description": "CHANGE ME",
+	"authors": [
+		"unilock"
+	],
+	"contact": {
+		"sources": "https://github.com/unilock/ElytraFix"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "cc.unilock.elytrafix.ElytraFix"
+		]
+	},
+	"mixins": [
+		"elytrafix.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">=1.20.4",
+		"fabric-api": "*"
+	}
+}
