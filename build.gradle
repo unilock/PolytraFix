@@ -11,8 +11,15 @@ base {
 }
 
 repositories {
-	//maven { url = "https://maven.nucleoid.xyz/" }
-	//maven { url = "https://repo.sleeping.town/" }
+	maven { url = "https://maven.nucleoid.xyz/" }
+	maven { url = "https://maven.ladysnake.org/releases/" }
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven/"
+		content {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 loom {
@@ -30,7 +37,9 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	//implementation include("folk.sisby:kaleido-config:${project.kaleido_version}")
+	// for testing
+	modImplementation "eu.pb4.polyport:trinkets:3.8.0+polymerport.2"
+	modImplementation "maven.modrinth:elytra_trinket:1.0.5"
 }
 
 processResources {
