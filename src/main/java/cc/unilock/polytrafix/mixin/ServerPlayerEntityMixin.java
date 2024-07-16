@@ -6,7 +6,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import pw.lakuna.elytra_trinket.ElytraTrinket;
+import pw.lakuna.elytra_trinket.ServerTools;
 
 @Mixin(ServerPlayerEntity.class)
 public class ServerPlayerEntityMixin {
@@ -17,7 +17,7 @@ public class ServerPlayerEntityMixin {
 	private void tick(CallbackInfo ci) {
 		if (PLAYER.isCreative()) return;
 
-		if (ElytraTrinket.isEquipped(PLAYER) && !PLAYER.isFallFlying()) {
+		if (ServerTools.isElytraTrinketEquipped(PLAYER) && !PLAYER.isFallFlying()) {
 			if (!PLAYER.getAbilities().allowFlying) {
 				PLAYER.getAbilities().allowFlying = true;
 				PLAYER.sendAbilitiesUpdate();

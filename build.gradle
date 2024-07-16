@@ -38,8 +38,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	// for testing
-	modImplementation "eu.pb4.polyport:trinkets:3.8.0+polymerport.2"
-	modImplementation "maven.modrinth:elytra_trinket:1.0.5"
+	modImplementation "eu.pb4.polyport:trinkets:3.10.0+polymerport.1"
+	modImplementation "maven.modrinth:elytra_trinket:1.0.9"
 }
 
 processResources {
@@ -52,14 +52,14 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = "UTF-8"
-	it.options.release = 17
+	it.options.release = 21
 }
 
 java {
 	withSourcesJar()
 
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
