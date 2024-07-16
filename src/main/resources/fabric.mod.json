@@ -1,28 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "elytrafix",
+	"id": "polytrafix",
 	"version": "${version}",
-	"name": "ElytraFix",
-	"description": "CHANGE ME",
+	"name": "PolytraFix",
+	"description": "Allows flying with Elytra when using it as a trinket server-side",
 	"authors": [
 		"unilock"
 	],
 	"contact": {
-		"sources": "https://github.com/unilock/ElytraFix"
+		"sources": "https://github.com/unilock/PolytraFix",
+		"issues": "https://github.com/unilock/PolytraFix/issues"
 	},
 	"license": "MIT",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "cc.unilock.elytrafix.ElytraFix"
+			"cc.unilock.polytrafix.PolytraFix"
 		]
 	},
 	"mixins": [
-		"elytrafix.mixins.json"
+		"polytrafix.mixins.json"
 	],
 	"depends": {
 		"fabricloader": "*",
-		"minecraft": ">=1.20.4",
-		"fabric-api": "*"
+		"minecraft": ">=1.20.3",
+		"elytra_trinket": "*",
+		"trinkets": "*"
 	}
 }

@@ -1,4 +1,4 @@
-package cc.unilock.elytrafix.mixin;
+package cc.unilock.polytrafix.mixin;
 
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;

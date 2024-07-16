@@ -1,4 +1,4 @@
-package cc.unilock.elytrafix.mixin;
+package cc.unilock.polytrafix.mixin;
 
 import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.entity.player.PlayerEntity;

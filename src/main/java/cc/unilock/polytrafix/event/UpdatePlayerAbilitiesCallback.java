@@ -1,4 +1,4 @@
-package cc.unilock.elytrafix.event;
+package cc.unilock.polytrafix.event;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;

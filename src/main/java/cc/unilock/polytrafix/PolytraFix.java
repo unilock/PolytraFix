@@ -1,12 +1,12 @@
-package cc.unilock.elytrafix;
+package cc.unilock.polytrafix;
 
-import cc.unilock.elytrafix.event.UpdatePlayerAbilitiesCallback;
+import cc.unilock.polytrafix.event.UpdatePlayerAbilitiesCallback;
 import net.fabricmc.api.ModInitializer;
 import pw.lakuna.elytra_trinket.ElytraTrinket;
 
-public class ElytraFix implements ModInitializer {
-	//public static final String MOD_ID = "elytrafix";
-    //public static final Logger LOGGER = LoggerFactory.getLogger("ElytraFix");
+public class PolytraFix implements ModInitializer {
+	//public static final String MOD_ID = "polytrafix";
+    //public static final Logger LOGGER = LoggerFactory.getLogger("PolytraFix");
 
 	@Override
 	public void onInitialize() {

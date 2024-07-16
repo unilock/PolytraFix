@@ -1,6 +1,6 @@
-package cc.unilock.elytrafix.mixin;
+package cc.unilock.polytrafix.mixin;
 
-import cc.unilock.elytrafix.event.UpdatePlayerAbilitiesCallback;
+import cc.unilock.polytrafix.event.UpdatePlayerAbilitiesCallback;
 import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.network.packet.c2s.play.UpdatePlayerAbilitiesC2SPacket;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
