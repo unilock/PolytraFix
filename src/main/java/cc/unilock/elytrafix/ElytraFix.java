@@ -12,8 +12,8 @@ public class ElytraFix implements ModInitializer {
 	public void onInitialize() {
 		UpdatePlayerAbilitiesCallback.EVENT.register(player -> {
 			if (ElytraTrinket.isEquipped(player)) {
-				player.getAbilities().flying = false;
 				player.getAbilities().allowFlying = false;
+				player.getAbilities().flying = false;
 
 				player.startFallFlying();
 

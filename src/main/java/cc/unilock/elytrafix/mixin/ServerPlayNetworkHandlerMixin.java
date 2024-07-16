@@ -1,13 +1,16 @@
 package cc.unilock.elytrafix.mixin;
 
 import cc.unilock.elytrafix.event.UpdatePlayerAbilitiesCallback;
+import net.minecraft.entity.player.PlayerAbilities;
 import net.minecraft.network.packet.c2s.play.UpdatePlayerAbilitiesC2SPacket;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ServerPlayNetworkHandler.class)
@@ -25,5 +28,10 @@ public class ServerPlayNetworkHandlerMixin {
 				this.player.sendAbilitiesUpdate();
 			}
 		}
+	}
+
+	@Redirect(method = "onPlayerMove", at = @At(value = "FIELD", target = "Lnet/minecraft/entity/player/PlayerAbilities;allowFlying:Z", opcode = Opcodes.GETFIELD))
+	private boolean onPlayerMove(PlayerAbilities instance) {
+		return instance.creativeMode || instance.invulnerable;
 	}
 }
