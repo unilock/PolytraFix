@@ -23,7 +23,8 @@
 	],
 	"depends": {
 		"fabricloader": "*",
-		"minecraft": ">=1.20.3",
+		"minecraft": ">=1.21",
+		"fabric-api": "*",
 		"elytra_trinket": "*",
 		"trinkets": "*"
 	}
